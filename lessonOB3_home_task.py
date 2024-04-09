@@ -112,13 +112,11 @@ for worker in workers:
 print("======================================================================================")
 
 
-
 class Zoo:
     def __init__(self):
         self.animals = []
         self.employees = []
 
-    # Вспомогательные методы для получения информации о работниках в нужном формате
     def get_employee_info_zookeeper(self, zookeeper):
         return f"{zookeeper.name}, {zookeeper.title}"
 
@@ -128,15 +126,12 @@ class Zoo:
     def get_animal_name(self, animal):
         return f"{animal.name}"
 
-    # метод для добавления животного в зоопарк
     def add_animal(self, animal):
         self.animals.append(animal)
 
-    # метод для добавления работника в зоопарк
     def add_employee(self, employee):
         self.employees.append(employee)
 
-    # метод для вывода информации о всех животных в зоопарке
     def print_all_animals_info(self):
         print("\n4. СПИСОК ВСЕХ ЖИВОТНЫХ ЗООПАРКА:")
         print("*Используется метод класса Zoo, у которого композиция с классом Animal.*")
@@ -145,7 +140,6 @@ class Zoo:
             print(self.get_animal_name(animal))
         print("========================================================================")
 
-    # метод для вывода информации о всех работниках в зоопарке
     def print_all_employees_info(self):
         print("\n5. СПИСОК ВСЕХ РАБОТНИКОВ ЗООПАРКА:")
         print("*Используется метод класса Zoo, у которого композиция с классами ZooKeeper и ZooWorker.*")
@@ -159,12 +153,10 @@ class Zoo:
 
 my_zoo = Zoo()
 
-# добавление животных
 my_zoo.add_animal(bird)
 my_zoo.add_animal(mammal)
 my_zoo.add_animal(reptile)
 
-# добавление работников
 my_zoo.add_employee(ornithologist)
 my_zoo.add_employee(felinologist)
 my_zoo.add_employee(herpetologist)
@@ -172,6 +164,5 @@ my_zoo.add_employee(veterinarian)
 my_zoo.add_employee(cooker)
 my_zoo.add_employee(cleaner)
 
-# вывод информации обо всех животных и работниках
 my_zoo.print_all_animals_info()
 my_zoo.print_all_employees_info()
